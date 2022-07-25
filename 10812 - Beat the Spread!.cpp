@@ -24,7 +24,7 @@ void solve()
         else{
             int x = (a+b)/2;
             int y = (a-b)/2;
-            if(x>y) cout << x << ' ' << y << endl;
+            if(abs(x-y) == b && (x+y) == a) cout << x << ' ' << y << endl;
             else cout << "impossible" << endl;
         }
 
