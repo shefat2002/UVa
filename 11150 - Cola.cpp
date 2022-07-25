@@ -16,14 +16,16 @@ void file();
 
 void solve()
 {
-    int n; cin >> n;
-    int  count = n;
-    while(n>=3){
-        count += n/3;
-        n = n/3 + n%3;
+    int n;
+    while(cin >> n){
+        int  count = n;
+        while(n>=3){
+            count += n/3;
+            n = n/3 + n%3;
+        }
+        if(n == 2) count++;
+        cout << count << endl;
     }
-    if(n == 2) count++;
-    cout << count << endl;
 
 }
 
