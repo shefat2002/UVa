@@ -17,12 +17,12 @@ void file();
 void solve()
 {
     int n; cin >> n;
-    int  count = 0;
-    while(n){
-        count += n;
-        n/=3;
-        count += n%3;
+    int  count = n;
+    while(n>=3){
+        count += n/3;
+        n = n/3 + n%3;
     }
+    if(n == 2) count++;
     cout << count << endl;
 
 }
