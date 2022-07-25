@@ -90,10 +90,10 @@ void solve()
         if(m[i] == ".-.-.-") cout << ".";
         if(m[i] == "--..--") cout << ",";
         if(m[i] == "..--..") cout << "?";
-        if(m[i] == ".----.") cout << "’";
+        if(m[i] == ".----.") cout << "'";
         if(m[i] == "-.-.--") cout << "!";
         if(m[i] == "-..-.") cout << "/";
-        if(m[i] == "-.{.") cout << "(";
+        if(m[i] == "-.--.") cout << "(";
         if(m[i] == "-.--.-") cout << ")";
         if(m[i] == ".-...") cout << "&";
         if(m[i] == "---...") cout << ":";
@@ -106,10 +106,9 @@ void solve()
         if(m[i] == ".--.-.") cout << "@";
         if(mark[i] > 0  ) cout << ' ' ;
     }
-    cout << endl;
+    nl;
 
 }
-
 
 int main()
 {
@@ -120,11 +119,11 @@ int main()
     while(n--){
         //fast;
         //case;
-        
-        cout << "Message #" << i << endl; 
+        cout << "Message #" << i ; 
+        nl;
         i++;
         solve();
-        nl;
+        if(n>=1) nl;
     }
     return 0;
 }
