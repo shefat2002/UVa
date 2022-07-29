@@ -25,13 +25,13 @@ void solve()
 {
     int n, m, c ;
     while(cin >> n >> m >> c && n && m && c){
-        int amp[n], op;
-        bool safe= true, on[21];
+        int amp[22], op;
+        bool safe= true, on[22];
         for(int i = 1 ; i <= n; i++){
             cin >> amp[i];
             on[i] = false;
         }
-        int current = 0, mx = 0;
+        int current = 0, mx = -1;
         for(int i = 1 ; i<=m ; i++){
             cin >> op;
             if(on[op]) current -= amp[op];
