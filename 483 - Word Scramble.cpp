@@ -23,6 +23,7 @@ void solve()
         vector<string>word;
         int n = 0;
         string temp;
+
         for(int i = 0 ;  i < s.length() ; i++){
             if(s[i] != ' '){
                 temp.push_back(s[i]);
@@ -33,12 +34,18 @@ void solve()
             }
         }
         word.push_back(temp);
-        string rev;
+        string print[word.size()];
+        int m  =0;
         for(auto &pt: word){
             //cout << pt << ' ' ;
             reverse(pt.begin(), pt.end());
-            cout << pt << ' ';
+            print[m] = pt;
+            m++;
         }
+        for(int i = 0 ; i< m-1 ; i++){
+            cout << print[i] << ' ';
+        }
+        cout << print[m-1];
         nl;
     }
 }
