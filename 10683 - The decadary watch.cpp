@@ -30,7 +30,7 @@ void solve()
         min = (s[2]-'0')*10+ (s[3]-'0');
         sec = (s[4]-'0')*10+ (s[5]-'0');
         c = (s[6]-'0')*10+ (s[7]-'0');
-        long long time = c *10 + sec * 100 + min * 60000 + h*3600000;
+        long long time = c *10 + sec * 1000 + min * 60000 + h*3600000;
         h = time / 8640000;
         time %= 8640000;
         min = time/86400;
@@ -38,7 +38,7 @@ void solve()
         sec = time/864;
         time %= 864;
         c = time*100/864;
-        cout << setfill('0') << setw(2)<< h;
+        cout <<  h;
         cout << setfill('0') << setw(2)<< min;
         cout << setfill('0') << setw(2)<< sec;
         cout << setfill('0') << setw(2)<< c;
