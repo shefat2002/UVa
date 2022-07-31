@@ -44,10 +44,10 @@ void solve()
                 break;
             }
         }
-        if(s_cng = 0) cout << "X ";
+        if(s_cng == 0 ) cout << "X ";
         else cout << s << " ";
         
-        if(t == 0 ) cout << "X ";
+        if(t <= luchu ) cout << "X";
         else cout << t;
         nl;
     }
