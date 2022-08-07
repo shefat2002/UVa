@@ -19,17 +19,17 @@ int dc[] = {1, -1, 1, -1, 2, -2, 2, -2};
 void file();
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
 
-bool turn(char tic[3][3] , char c)
+bool turne(char tic[3][3] , char c)
 {
-    if(tic[0][0] == c && tic[0][1] == c && tic[0][2] == c) return true;
-    if(tic[1][0] == c && tic[1][1] == c && tic[1][2] == c) return true;
-    if(tic[2][0] == c && tic[2][1] == c && tic[2][2] == c) return true;
-    if(tic[0][0] == c && tic[1][0] == c && tic[2][0] == c) return true;
-    if(tic[0][1] == c && tic[1][1] == c && tic[2][1] == c) return true;
-    if(tic[0][2] == c && tic[1][2] == c && tic[2][2] == c) return true;
-    if(tic[0][0] == c && tic[1][1] == c && tic[2][2] == c) return true;
-    if(tic[0][2] == c && tic[1][1] == c && tic[2][2] == c) return true;
-    return false;
+    if(tic[0][0] == c && tic[0][1] == c && tic[0][2] == c) return false;
+    if(tic[1][0] == c && tic[1][1] == c && tic[1][2] == c) return false;
+    if(tic[2][0] == c && tic[2][1] == c && tic[2][2] == c) return false;
+    if(tic[0][0] == c && tic[1][0] == c && tic[2][0] == c) return false;
+    if(tic[0][1] == c && tic[1][1] == c && tic[2][1] == c) return false;
+    if(tic[0][2] == c && tic[1][2] == c && tic[2][2] == c) return false;
+    if(tic[0][0] == c && tic[1][1] == c && tic[2][2] == c) return false;
+    if(tic[0][2] == c && tic[1][1] == c && tic[2][0] == c) return false;
+    return true;
 }
 
 void solve()
@@ -43,15 +43,15 @@ void solve()
             else if(tic[i][j] == 'O') O++;
         }
     }
-    bool mark = true;
+    bool mark ;
     if(X == O){
-        if(turn(tic, 'X')) mark = false;
+        mark = turne(tic, 'X');
     }
     else if(X == O+1){
-        if(turn(tic, 'O')) mark = false;
+        mark = turne(tic, 'O');
     }
     else mark = false;
-    if(mark)cout << "yes";
+    if(mark) cout << "yes";
     else cout << "no";
     nl;
 
@@ -63,7 +63,7 @@ int main()
     file();
     int n; cin >> n;
     
-    while(n--){
+    while(n--){ 
         //fast;
         //case;
         solve();
