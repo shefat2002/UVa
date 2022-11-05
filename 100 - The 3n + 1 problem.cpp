@@ -25,9 +25,9 @@ void solve()
     ll a,b;
     while(cin >> a >> b){
         cout << a << ' ' << b << ' ';
-        if(a>b) a = b;
+        
         ll mx = -1;
-        for(int i = a; i <=b; i++){
+        for(int i = min(a,b); i <=max(a,b); i++){
             ll j = i;
             ll cnt = 1;
             while(j !=1){
