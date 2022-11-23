@@ -1,6 +1,22 @@
 #include <bits/stdc++.h>
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <set>
+#include <map>
+#include <vector>
+#include <string>
+#include <cmath>
+#include <cstring>
+#include <queue>
+#include <stack>
+#include <algorithm>
+#include <sstream>
+#include <numeric>
+#include <ctime>
+#include <cctype>
+#include <limits>
 using namespace std;
-
 #define ll      long long
 #define nl      cout << "\n";
 #define pi      (2*acos(0))
@@ -13,26 +29,25 @@ using namespace std;
 
 int case_number = 1;
 //knights move
-int dx[] = { 2, 1, -1, -2, -2, -1, 1, 2 };
-int dy[] = { -1, -2, -2, -1, 1, 2, 2, 1 };
+int dr[] = {2, 2, -2, -2, 1, 1, -1, -1};
+int dc[] = {1, -1, 1, -1, 2, -2, 2, -2};
 
 
 void file();
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
+
 double p, q ,r ,s ,t,u;
 double f(double x)
 {
     return p*exp(-x) + q * sin(x) +r *cos(x) +s * tan(x) +t *x*x +u;
 }
 
-
 void solve()
 {
-   
     while(cin >> p>> q >> r >> s>>t>>u){
         double l = 0, r = 1, mid;
         if(f(0) <0 || f(1) >0){
-            cout << "No solution";
+            cout << "No solution";nl;
             continue;
         }
         while(r-l > 1e-12){
@@ -49,14 +64,15 @@ void solve()
 
 }
 
+
 int main()
 {
     file();
     int n; 
     solve();
-    //cin >> n; while(n--){solve();nl}       //CF
-    //cin >> n; while(n--){case;solve();nl;} // Case 
-    //cin >> n; while(n--){caseh;solve();nl;} // Case (Case #01: )
+    //cin >> n; while(n--){solve();nl;}
+    //cin >> n; while(n--){case;nl;solve();nl;} // Case 
+    //cin >> n; while(n--){caseh;solve();nl;} // Case (Case #1: )
     return 0;
 }
 
