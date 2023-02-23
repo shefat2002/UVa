@@ -1,32 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-#define ll      long long
-#define nl      cout << "\n";
-#define pi      (2*acos(0))
-#define case    cout << "Case " << case_number << ": "; case_number++;
-#define fast    ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
-#define MAX_INT 1000002
-#define YES     "Yes"
-#define NO      "No"
-
-int case_number = 1;
-//knights move
-int dr[] = {2, 2, -2, -2, 1, 1, -1, -1};
-int dc[] = {1, -1, 1, -1, 2, -2, 2, -2};
-
-
-void file();
-/*----------------------------------------------------------------------------------------------------------------------------------------*/
+#define nl cout << "\n";
+#define ll long long
 
 int code(char c)
 {
     if(c == 'B' || c == 'P' ||c == 'F' ||c == 'V'  ) return 1;
-    if(c == 'C' || c == 'S' || c == 'K'|| c == 'G'|| c == 'J'|| c == 'Q'|| c == 'X'|| c == 'Z') return 1;
-    if(c == 'D'|| c == 'T') return 1;
-    if(c == 'L' ) return 1;
-    if(c == 'M'|| c == 'N') return 1;
-    if(c == 'R') return 1;
+    if(c == 'C' || c == 'S' || c == 'K'|| c == 'G'|| c == 'J'|| c == 'Q'|| c == 'X'|| c == 'Z') return 2;
+    if(c == 'D'|| c == 'T') return 3;
+    if(c == 'L' ) return 4;
+    if(c == 'M'|| c == 'N') return 5;
+    if(c == 'R') return 6;
     else return 0;
 }
 
@@ -54,29 +38,12 @@ void solve()
     }
     cout << setw(19) << " " << "END OF OUTPUT";
     nl;
-    
-
 }
-
 
 int main()
 {
-    file();
-    //int n; cin >> n;
     
-    //while(n--){
-        //fast;
-    //    case;
-        solve();
-    //    nl;
-    //}
+    solve();
     return 0;
-}
 
-void file()
-{
-    #ifndef ONLINE_JUDGE
-    freopen("in.txt" , "r", stdin);
-    freopen("out.txt" , "w", stdout);
-    #endif
 }
